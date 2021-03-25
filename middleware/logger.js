@@ -7,7 +7,7 @@ module.exports = function(request, response,next){
     response.on('finish',function(){
         var duration = +new Date() - start;
         var msg = method + ' to ' + url +
-        ' took ' + duration + 'ms \n\n';
+        ' took ' + duration + 'ms \n';
         stream.write(msg); //Print the log message
     });
 
