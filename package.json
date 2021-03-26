@@ -5,16 +5,30 @@
   "author": "Jonathan M",
   "scripts": {
     "start": "node ./bin/www",
-    "start:dev": "node ./bin/www --watch", 
+    "start:dev": "node ./bin/www --watch",
+    "start:auto": "DEBUG=express-server nodemon ./bin/www",
     "start:debug": "DEBUG=express-server:* npm start",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
-  }, 
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint app.js"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "nodemonConfig":{
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500"
+
   }
 }

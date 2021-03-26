@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.main-conf {
+  background-image: url("../images/Sunset-hd.jpg");
+  background-position: center;
+}
