@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express Practice' });
+  res.render('index', 
+    { title: 'Express Practice',
+      list:['a','b','c']});
 });
 
 module.exports = router;
