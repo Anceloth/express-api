@@ -9,6 +9,10 @@ var blocks = {
 };
 
 /* GET users listing. */
+router.get('/',function(req,res,next){
+  res.json(blocks);
+});
+
 router.get('/:fieldName', function(req, res, next) {
 
   var fieldIncome = req.params.fieldName;
