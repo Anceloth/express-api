@@ -2,10 +2,31 @@ extends layout
 
 block content
   body(class="main-conf")
-    h1= title
-    div(class="container")
-      div(class="jumbotron") 
-        p Welcome to #{title}
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      a.navbar-brand(href="#") BRAND
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#main-navbar")
+        span.navbar-toggler-icon
+      #main-navbar.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href="#") Link 1
+          li.nav-item
+            a.nav-link(href="#") Link 2
+          li.nav-item
+            a.nav-link(href="#") Link 3
+          li.nav-item.dropdown
+            a#dropdown01.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Dropdown
+            .dropdown-menu
+              a.dropdown-item(href="#") Action 1
+              a.dropdown-item(href="#") Action 2
+              a.dropdown-item(href="#") Action 3
+        form.form-inline.my-2.my-lg-0
+          input.form-control.mr-sm-2(type="text" placeholder="Input...")
+          button.btn.btn-primary.my-2.my-sm-0(type="submit") OK
+    main.container(role="main" style="padding: 60px;")
+        h1.text-center Bootstrap starter template
+        p.lead.text-center This document as a way to quickly start a new Bootstrap 4 project.
+        p.text-center Build upon this barebones HTML document.
         
         ul 
           each val in list
