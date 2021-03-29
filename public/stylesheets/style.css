@@ -9,5 +9,17 @@ a {
 
 .main-conf {
   background-image: url("../images/Sunset-hd.jpg");
-  background-position: center;
+  background-position: top;
 }
+
+[class*="card-books"]{
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-books{
+    width: 60%;
+    height: 25%;
+  } 
+}
+
